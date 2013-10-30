@@ -1,0 +1,146 @@
+
+17:05:00 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step1
+
+17:05:00 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step1
+
+17:05:00 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step1
+
+17:05:00 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step1
+
+17:05:00 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step1
+
+17:05:00 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step1
+
+17:05:00 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 60 when visiting /install.php?m=install&f=step1
+
+17:05:00 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 61 when visiting /install.php?m=install&f=step1
+
+17:05:00 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 62 when visiting /install.php?m=install&f=step1
+
+17:05:00 printf(): Too few arguments in /home/azhi/blog/system/module/install/view/footer.html.php on line 3 when visiting /install.php?m=install&f=step1
+
+17:05:01 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step2
+
+17:05:01 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step2
+
+17:05:01 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step2
+
+17:05:01 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step2
+
+17:05:01 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step2
+
+17:05:01 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step2
+
+17:05:01 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 60 when visiting /install.php?m=install&f=step2
+
+17:05:01 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 61 when visiting /install.php?m=install&f=step2
+
+17:05:01 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 62 when visiting /install.php?m=install&f=step2
+
+17:05:01 printf(): Too few arguments in /home/azhi/blog/system/module/install/view/footer.html.php on line 3 when visiting /install.php?m=install&f=step2
+
+17:05:08 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step3
+
+17:05:08 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step3
+
+17:05:08 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step3
+
+17:05:08 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step3
+
+17:05:08 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step3
+
+17:05:08 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step3
+
+17:05:08 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 60 when visiting /install.php?m=install&f=step3
+
+17:05:08 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 61 when visiting /install.php?m=install&f=step3
+
+17:05:08 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 62 when visiting /install.php?m=install&f=step3
+
+17:05:08 printf(): Too few arguments in /home/azhi/blog/system/module/install/view/footer.html.php on line 3 when visiting /install.php?m=install&f=step3
+
+17:05:32 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step4
+
+17:05:32 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step4
+
+17:05:32 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step4
+
+17:05:32 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step4
+
+17:05:32 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step4
+
+17:05:32 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step4
+
+17:05:32 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 60 when visiting /install.php?m=install&f=step4
+
+17:05:32 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 61 when visiting /install.php?m=install&f=step4
+
+17:05:32 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 62 when visiting /install.php?m=install&f=step4
+
+17:05:32 printf(): Too few arguments in /home/azhi/blog/system/module/install/view/footer.html.php on line 3 when visiting /install.php?m=install&f=step4
+
+17:05:39 Declaration of userModel::delete() should be compatible with model::delete($table, $id) in /home/azhi/blog/system/module/user/model.php on line 468 when visiting /install.php?m=install&f=step4
+
+17:05:39 Non-static method sql::replace() should not be called statically, assuming $this from incompatible context in /home/azhi/blog/system/lib/dao/dao.class.php on line 333 when visiting /install.php?m=install&f=step4
+
+17:05:39 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:05:39 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:05:39 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:05:39 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:05:39 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:05:39 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:05:39 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 60 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:05:39 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 61 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:05:39 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 62 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:05:39 printf(): Too few arguments in /home/azhi/blog/system/module/install/view/footer.html.php on line 3 when visiting /install.php?m=install&f=step5&admin=azhi
+
+17:07:41 Declaration of userModel::delete() should be compatible with model::delete($table, $id) in /home/azhi/blog/system/module/user/model.php on line 468 when visiting /admin.php
+
+17:07:41 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /admin.php
+
+17:07:41 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /admin.php
+
+17:07:41 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /admin.php
+
+17:07:41 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /admin.php
+
+17:07:41 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /admin.php
+
+17:07:41 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /admin.php
+
+17:07:41 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 60 when visiting /admin.php
+
+17:07:41 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 61 when visiting /admin.php
+
+17:07:41 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 62 when visiting /admin.php
+
+17:07:48 Declaration of userModel::delete() should be compatible with model::delete($table, $id) in /home/azhi/blog/system/module/user/model.php on line 468 when visiting /
+
+17:07:48 Declaration of slideModel::delete() should be compatible with model::delete($table, $id) in /home/azhi/blog/system/module/slide/model.php on line 161 when visiting /
+
+17:07:48 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /
+
+17:07:48 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 8 when visiting /
+
+17:07:48 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /
+
+17:07:48 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 58 when visiting /
+
+17:07:48 Undefined property: config::$oauth in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /
+
+17:07:48 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 59 when visiting /
+
+17:07:48 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 60 when visiting /
+
+17:07:48 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 61 when visiting /
+
+17:07:48 Trying to get property of non-object in /home/azhi/blog/system/module/common/view/header.lite.html.php on line 62 when visiting /

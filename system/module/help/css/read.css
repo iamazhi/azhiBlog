@@ -1,0 +1,6 @@
+#contentNav {float:right; background:#efefef; padding:15px; position:relative; top:-15px; border:1px solid #dedfe1}
+#contentNav a{color:black; font-size:12px; margin:0px; font-weight:normal}
+.content h1{margin:0 0 10px 0}
+h4:target {color:red; font-size:18px}
+#summary{margin-bottom:10px; padding:5px; line-height:1.5; background:#efefef; font-size:12px}
+#keywords{margin-top:10px; padding:5px; line-height:1.5; background:#efefef; font-size:12px}

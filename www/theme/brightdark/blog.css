@@ -1,0 +1,28 @@
+/* global style. */
+body{background: #2e353f;  color: #c8c8c8;}
+a{color: #da3b26; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s; -webkit-backface-visibility: hidden;}
+a:hover{color: #ea442e;}
+.content-box ,.table,.media-list{color: #2e353f;}
+
+/* navs. */
+.header>.nav{border-color: #808080;}
+.header>.nav>li a {color: #c8c8c8;}
+.header>.nav>li a:hover{color: #fff;background-color:#ea442e;border-bottom:2px solid #da3b26;margin-bottom: -2px;}
+.header>.nav>li.active a,.header>.nav>li.active a:hover{color: #da3b26;border-bottom-color:#da3b26;background-color: transparent;}
+
+/* buttons. */
+.btn{border: none; padding: 8px 12px; -webkit-transition: 0.25s linear; -moz-transition: 0.25s linear; -o-transition: 0.25s linear; transition: 0.25s linear; -webkit-backface-visibility: hidden; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;}
+.btn-primary{background: #808080;}
+.btn-primary:hover{background: #da3b26;}
+.btn-default{color: #f1f1f1; background: #2C3E50;}
+.btn-default:hover{color: #fff; background: #34495E;}
+
+/*form controls.*/
+.ke-container, select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{border: 1px solid #bdc3c7; color: #34495e; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 15px; padding: 6px 12px; height: 36px; -webkit-appearance: none; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;-webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear; -moz-transition: border .25s linear, color .25s linear, background-color .25s linear; -o-transition: border .25s linear, color .25s linear, background-color .25s linear; transition: border .25s linear, color .25s linear, background-color .25s linear; -webkit-backface-visibility: hidden;}
+textarea{height: auto;}
+textarea.area-1{min-height: 60px;}
+
+.ke-container,.chosen-choices{border: 1px solid #bdc3c7 !important; height: auto;}
+.chosen-container-active .chosen-choices{border-color: #1abc9c !important;}
+select:focus,textarea:focus,input:focus, select:hover,textarea:hover,input:hover, select.hover,textarea.hover,input.hover{border-color: #da3b26; outline: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;}
+textarea{height: auto;}

@@ -1,0 +1,6 @@
+.content h1{font-size: 28px; margin-top: 0;}
+.content img{margin: 10px auto; max-width:100%;}
+.a-left{text-align: left;}
+.a-right{text-align: right;}
+#summary{margin-bottom:10px; padding:5px; line-height:1.5; background:#efefef; font-size:12px}
+#keywords{margin-top:10px; padding:5px; line-height:1.5; background:#efefef; font-size:12px}

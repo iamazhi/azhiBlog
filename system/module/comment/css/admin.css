@@ -1,0 +1,12 @@
+.table-bordered tr td.content-box{border-left: 1px solid #DDD; border-bottom: 1px solid #DDD;}
+td.content-box{padding: 8px 0;}
+.content-box textarea{width: 95%; margin: 0; border: none; resize: none; box-shadow: none;}
+.content-box textarea:focus{margin: 0; border: none; box-shadow: none;}
+
+caption{padding:0;}
+#statusNav{margin:0; }
+caption ul li{padding: 0;}
+.nav-tabs li{margin-bottom: -2px;}
+.nav-tabs li.active:first-child a{border-radius: 4px 0 0;}
+.nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:focus{border: 0; border-radius: 0;}
+.nav-tabs .active  a{color:#333;}
