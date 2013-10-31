@@ -94,7 +94,7 @@ class articleModel extends model
         }
 
         /* Assign summary to it's article. */
-        foreach($articles as $article) $article->summary = empty($article->summary) ? helper::substr(strip_tags($article->content), 200, '...') : $article->summary;
+        foreach($articles as $article) $article->summary = empty($article->summary) ? helper::substr(strip_tags($article->content), 140, '...') : $article->summary;
 
         return $articles;
     }
