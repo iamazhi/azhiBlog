@@ -38,6 +38,62 @@ class tagModel extends model
     }
     
     /**
+     * Add link on tags in string.
+     * 
+     * @param  string    $content 
+     * @access public
+     * @return string
+     */
+    public function addLink($content)
+    {
+        /* Get tags order by tag length desc. */
+        $tags = $this->dao->select('*')->from(TABLE_TAG)->where('link')->ne('')->orderBy('length(tag)_desc')->fetchAll('id');
+
+        /* Mark tags need to added link. */
+        foreach($tags as $tag) $content = $this->markTag($content, $tag);
+
+        /* Replace mark with tags and links. */
+        foreach($tags as $id => $tag)
+        {
+            $content = str_replace("{tag{$id}}", $tag->tag, $content);
+            $content = str_replace("{link{$id}}", html::a($tag->link, $tag->tag, '', "class='tag-link'"), $content);
+        }
+        return $content;
+    }
+
+    /**
+     * Mark tags needed to replaced.
+     * 
+     * @param  string    $content 
+     * @param  object    $tag 
+     * @access public
+     * @return string
+     */
+    public function markTag($content, $tag)
+    {
+        if(strpos($content, $tag->link) !== false) return $content;
+
+        $pos = strpos($content, $tag->tag);
+        if($pos === false) return $content;
+
+        $preContent  = substr($content, 0, $pos);
+        $startNeddle = '<a'; 
+        $endNeddle   = '</a>'; 
+
+        /* If tag is not in html::a tag mark it with link{tagID}. */
+        if(strpos($preContent, $startNeddle) == false) return substr_replace($content, "{link$tag->id}", $pos, strlen($tag->tag));
+
+        /* If tag is in html::a tag mark it with tag{tagID}. */
+        if((strpos($preContent, $endNeddle) == false ) or (strpos($preContent, $endNeddle) < strpos($preContent, $startNeddle)) ) 
+        {
+            $content = substr_replace($content, "{tag$tag->id}", $pos, strlen($tag->tag));
+            return $this->markTag($content, $tag);
+        }
+
+        return substr_replace($content, "{link$tag->id}", $pos, strlen($tag->tag));
+    }
+
+    /**
      * Save tags.
      * 
      * @param  string    $tags 

@@ -33,7 +33,7 @@ if(!empty($category)) echo $common->printPositionBar($category, '', '', $root);
             if(!empty($article->image))
             {
                 $title = $article->image->primary->title ? $article->image->primary->title : $article->title;
-                echo html::image($article->image->primary->smallURL, "title='{$title}' class='media-object'");
+                echo html::image($article->image->primary->smallURL, "title='{$title}' class='thumbnail'");
             }
             ?>
             <?php echo $article->summary;?>

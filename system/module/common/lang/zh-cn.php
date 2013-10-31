@@ -152,6 +152,7 @@ $lang->site->menu->logo      = 'LOGO设置|site|setlogo|';
 $lang->site->menu->nav       = '导航设置|nav|admin|';
 $lang->site->menu->theme     = '主题风格|site|settheme|';
 $lang->site->menu->slide     = array('link' => '幻灯片设置|slide|admin|', 'alias' => 'create,edit');
+$lang->site->menu->tag       = '关键词设置|tag|admin|';
 $lang->site->menu->oauth     = '开放登录|site|setoauth|';
 $lang->site->menu->link      = '友情链接|partner|setlink|';
 
@@ -167,6 +168,12 @@ $lang->menuGroups = new stdclass();
 $lang->tree = new stdclass();
 $lang->tree->menu = $lang->article->menu;
 $lang->menuGroups->tree = 'article';
+
+/* Menu of tag module. */
+$lang->tag = new stdclass();
+$lang->tag->menu = $lang->site->menu;
+$lang->menuGroups->tag = 'site';
+
 
 /* Menu of nav module. */
 $lang->nav = new stdclass();

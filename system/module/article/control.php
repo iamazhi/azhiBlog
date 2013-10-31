@@ -36,7 +36,7 @@ class article extends control
     {   
         $type = 'article';
         $this->app->loadClass('pager', $static = true);
-        $pager = new pager($recTotal = 0, $recPerPage = 4, $pageID);
+        $pager = new pager($recTotal = 0, $recPerPage = 6, $pageID);
         $category = $this->loadModel('tree')->getById($categoryID);
         $articles = $this->article->getList($type, $this->tree->getFamily($categoryID, $type), 'id_desc', $pager);
 
@@ -156,7 +156,7 @@ class article extends control
         if($_POST)
         {
             $this->article->create($type);       
-            if(dao::isError())  $this->send(array('result' => 'fail', 'message' => dao::geterror()));
+            if(dao::isError())  $this->send(array('result' => 'fail', 'message' => dao::getError()));
             $this->send(array('result' => 'success', 'message' => $this->lang->saveSuccess, 'locate'=>inlink('admin', "type=$type")));
         }
 
@@ -187,7 +187,7 @@ class article extends control
             $this->lang->menuGroups->article = 'help';
         }
 
-        $article    = $this->article->getByID($articleID);
+        $article    = $this->article->getByID($articleID, $replaceTag = false);
 
         $categories = $this->loadModel('tree')->getOptionMenu($type, 0, $removeRoot = true);
         if(empty($categories))

@@ -22,7 +22,7 @@ include '../../common/view/treeview.html.php';
               if(!empty($article->image))
               {
                   $title = $article->image->primary->title ? $article->image->primary->title : $article->title;
-                  echo html::a($url, html::image($article->image->primary->smallURL, "title='{$title}' class='media-object'"));
+                  echo html::a($url, html::image($article->image->primary->smallURL, "title='{$title}' class='thumbnail'"));
               }
               ?>
               <?php echo $article->summary;?>

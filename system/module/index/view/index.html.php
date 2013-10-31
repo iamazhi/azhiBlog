@@ -5,7 +5,16 @@
   <div class='carousel-inner'>
     <?php foreach($slides as $slide):?>
     <div class='item'>
-      <?php echo html::image($slide->image);?>
+      <?php 
+      if($slide->url != '' and $slide->label == '')
+      {
+          echo html::a($slide->url, html::image($slide->image));
+      }
+      else
+      {
+          echo html::image($slide->image);
+      }
+      ?>
       <div class='container'>
         <div class='carousel-caption'>
           <h2><?php echo $slide->title;?></h2>

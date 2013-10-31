@@ -15,14 +15,18 @@ class productModel extends model
      * Get an product by id.
      * 
      * @param  int      $productID 
+     * @param  bool     $replaceTag 
      * @access public
      * @return bool|object
      */
-    public function getByID($productID)
+    public function getByID($productID, $replaceTag = true)
     {   
         /* Get product self. */
         $product = $this->dao->select('*')->from(TABLE_PRODUCT)->where('id')->eq($productID)->fetch();
         if(!$product) return false;
+
+        /* Add link to content if necessary. */
+        if($replaceTag) $product->content = $this->loadModel('tag')->addLink($product->content);
 
         /* Get it's categories. */
         $product->categories = $this->dao->select('t2.*')
@@ -194,8 +198,8 @@ class productModel extends model
             ->add('addedDate', helper::now())
             ->get();
 
-        $product->alias    = seo::processAlias($product->alias);
-        $product->keywords = seo::processTags($product->keywords);
+        $product->alias    = seo::unify($product->alias, '-');
+        $product->keywords = seo::unify($product->keywords, ',');
 
         $this->dao->insert(TABLE_PRODUCT)
             ->data($product, $skip = 'categories')
@@ -230,8 +234,8 @@ class productModel extends model
             ->add('editedDate', helper::now())
             ->get();
 
-        $product->alias    = seo::processAlias($product->alias);
-        $product->keywords = seo::processTags($product->keywords);
+        $product->alias    = seo::unify($product->alias, '-');
+        $product->keywords = seo::unify($product->keywords, ',');
 
         $this->dao->update(TABLE_PRODUCT)
             ->data($product, $skip = 'categories')
@@ -240,11 +244,12 @@ class productModel extends model
             ->where('id')->eq($productID)
             ->exec();
 
-        $this->loadModel('tag')->save($product->keywords);
-        if(!dao::isError()) $this->processCategories($productID, $this->post->categories);
+        if(dao::isError()) return false;
 
-        if(!dao::isError()) return true;
-        return false;
+        $this->loadModel('tag')->save($product->keywords);
+        $this->processCategories($productID, $this->post->categories);
+
+        return !dao::isError();
     }
         
     /**

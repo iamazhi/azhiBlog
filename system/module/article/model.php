@@ -15,17 +15,19 @@ class articleModel extends model
      * Get an article by id.
      * 
      * @param  int      $articleID 
+     * @param  bool     $replaceTag 
      * @access public
      * @return bool|object
      */
-    public function getByID($articleID)
+    public function getByID($articleID, $replaceTag = true)
     {   
         /* Get article self. */
-        $article = $this->dao->select('*')
-            ->from(TABLE_ARTICLE)
-            ->where('id')->eq($articleID)
-            ->fetch();
+        $article = $this->dao->select('*')->from(TABLE_ARTICLE)->where('id')->eq($articleID)->fetch();
+
         if(!$article) return false;
+        
+        /* Add link to content if necessary. */
+        if($replaceTag) $article->content = $this->loadModel('tag')->addLink($article->content);
 
         /* Get it's categories. */
         $article->categories = $this->dao->select('t2.*')
@@ -171,8 +173,8 @@ class articleModel extends model
             ->add('type', $type)
             ->get();
 
-        $article->keywords = seo::processTags($article->keywords);
-        $article->alias    = seo::processAlias($article->alias);
+        $article->keywords = seo::unify($article->keywords, ',');
+        $article->alias    = seo::unify($article->alias, '-');
 
         $this->dao->insert(TABLE_ARTICLE)
             ->data($article, $skip = 'categories')
@@ -180,10 +182,10 @@ class articleModel extends model
             ->batchCheck($this->config->article->create->requiredFields, 'notempty')
             ->exec();
 
+        if(dao::isError()) return false;
+
         /* Save article keywords. */
         $this->loadModel('tag')->save($article->keywords);
-
-        if(dao::isError()) return false;
 
         $articleID = $this->dao->lastInsertID();
         $this->processCategories($articleID, $type, $this->post->categories);
@@ -193,7 +195,7 @@ class articleModel extends model
     /**
      * Update an article.
      * 
-     * @param string $articleID 
+     * @param string   $articleID 
      * @access public
      * @return void
      */
@@ -205,8 +207,8 @@ class articleModel extends model
             ->add('editedDate', helper::now())
             ->get();
 
-        $article->keywords = seo::processTags($article->keywords);
-        $article->alias    = seo::processAlias($article->alias);
+        $article->keywords = seo::unify($article->keywords, ',');
+        $article->alias    = seo::unify($article->alias, '-');
         
         $this->dao->update(TABLE_ARTICLE)
             ->data($article, $skip = 'categories')
@@ -214,12 +216,12 @@ class articleModel extends model
             ->batchCheck($this->config->article->edit->requiredFields, 'notempty')
             ->where('id')->eq($articleID)
             ->exec();
+        if(dao::isError()) return false;
 
-        /* Save article keywords. */
         $this->loadModel('tag')->save($article->keywords);
+        $this->processCategories($articleID, $type, $this->post->categories);
 
-        if(!dao::isError()) $this->processCategories($articleID, $type, $this->post->categories);
-        return false;
+        return !dao::isError();
     }
         
     /**

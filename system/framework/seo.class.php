@@ -151,7 +151,7 @@ class seo
      */
     public function unify($string, $to)
     {
-       $tags = str_replace(array('_', '、', ' ', '-', '?', '@', '&', '%', '~', '`', '+', '*', '/', '\\', '，', '.', '。'), $to, $string);
+       $string = str_replace(array('_', '、', ' ', '-', '?', '@', '&', '%', '~', '`', '+', '*', '/', '\\', '，', '.', '。'), $to, $string);
        return preg_replace('/[,]+/', $to, $string);
     }
 }
