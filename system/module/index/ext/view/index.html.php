@@ -3,7 +3,7 @@
   <div class='col-md-12'>
     <div class="row"  id='listBox'>
       <?php foreach($latestArticles as $article):?>
-      <?php $url = inlink('view', "id=$article->id", "category={$category->alias}&name=$article->alias");?>
+      <?php $url = $this->createLink('article', 'view', "id=$article->id", "category={$category->alias}&name=$article->alias");?>
       <div class='col-md-3'>
         <div class='content-box'>
           <h3 class='media-heading'><?php echo html::a($url, $article->title);?></h3>
