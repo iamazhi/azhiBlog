@@ -1,5 +1,5 @@
 <style>
-#childNavBox {margin-left:-15px; height:46px; border-bottom:1px solid #cecece}
+#childNavBox {height:46px; border-bottom:1px solid #cecece}
 
 #currentPos {font-size:30px; color:#aaa; position:relative; float:left;}
 #currentPos span{float:left;}
@@ -40,21 +40,22 @@
  }
  $parentName = $category->name ? $category->name : $category->title;
  ?>
-<div class='row' id='childNavBox'>
-  <div class='col-md-2' id='currentPos'>
-    <span id='parentName'><?php echo $parentName;?></span>
-    <span id='currentName'><?php echo $currentName;?></span>
+<div class='row'>
+  <div class='col-md-10' id='childNavBox'>
+    <div class='col-md-2' id='currentPos'>
+      <span id='parentName'><?php echo $parentName;?></span>
+      <span id='currentName'><?php echo $currentName;?></span>
+    </div>
+    <div class='col-md-8'>
+     <ul id='childNav'>
+        <?php foreach($topNavs[$category->id]->children as $child):?>
+        <li class="cat-item <?php echo $child->class?>">
+          <?php echo html::a($child->url, $child->title, isset($child->target) ? $child->target : '');?>
+        </li>
+        <?php endforeach;?>
+      </ul>
+    </div>
   </div>
-  <div class='col-md-8'>
-   <ul id='childNav'>
-      <?php foreach($topNavs[$category->id]->children as $child):?>
-      <li class="cat-item <?php echo $child->class?>">
-        <?php echo html::a($child->url, $child->title, isset($child->target) ? $child->target : '');?>
-      </li>
-      <?php endforeach;?>
-    </ul>
-  </div>
-  <div class='col-md-2'></div>
 </div>
 
 
