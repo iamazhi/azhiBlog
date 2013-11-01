@@ -1,0 +1,3 @@
+#articleBox {height:90%;overflow:auto}
+#articleBox .box{border:none}
+#currentTitle {position:absolute; right:0px; top:10px; color:#707070}

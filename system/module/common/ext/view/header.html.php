@@ -3,6 +3,7 @@ include '../../view/header.lite.html.php';
 js::set('lang', $lang->js);
 ?>
 <style>
+html {overflow:hidden}
 .container { margin:0px; padding:0px;}
 html, body, .container, #header > .row, #nameBox, 
 #sloganBox, #sloganBox .row, #sloganBox .row div,
@@ -43,7 +44,7 @@ html, body, .container, #header > .row, #nameBox,
   <div class='row' id='middleBox'>
     <div class='col-md-2' id='leftBox'>
       <?php $topNavs = $this->loadModel('nav')->getNavs('top');?>
-      <ul class='nav'>
+      <ul class='nav' >
         <?php foreach($topNavs as $nav1):?>
         <li class="<?php echo $nav1->class?>"> 
           <?php echo html::a($nav1->url, $nav1->title, isset($nav1->target) ? $nav1->target : '');?>
